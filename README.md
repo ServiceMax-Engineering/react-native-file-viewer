@@ -260,8 +260,14 @@ RNFS.downloadFile(options)
 
 | Parameter                          | Type     | Description                                                                                                      |
 | ---------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| **displayName** (optional)         | string   | Customize the QuickLook title (iOS only).                                                                        |
-| **onDismiss** (optional)           | function | Callback invoked when the viewer is being dismissed (iOS and Android only).                                      |
+| **displayName** (optional)         | string   | Customize the QuickLook title (iOS only).
+|
+| **onSend** (optional)              | function | Callback invoked when clicks on send button on the viewer. (iOS only).
+|
+| **onDismiss** (optional)           | function | Callback invoked when the viewer is being dismissed (iOS and Android only). 
+|
+| **showSendButton** (optional)      | boolean  | Shows send button on top left (iOS only).
+|
 | **showOpenWithDialog** (optional)  | boolean  | If there is more than one app that can open the file, show an _Open With_ dialogue box (Android only).           |
 | **showAppsSuggestions** (optional) | boolean  | If there is not an installed app that can open the file, open the Play Store with suggested apps (Android only). |
 
