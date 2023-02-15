@@ -27,6 +27,7 @@ public class RNFileViewerModule extends ReactContextBaseJavaModule {
   private static final String SHOW_SEND_BUTTON ="showSendButton";
   private static final String OPEN_EVENT = "RNFileViewerDidOpen";
   private static final String DISMISS_EVENT = "RNFileViewerDidDismiss";
+  private static final String SEND_EVENT = "RNFileViewerDidSend";
   private static final Integer RN_FILE_VIEWER_REQUEST = 33341;
 
   private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
@@ -47,6 +48,7 @@ public class RNFileViewerModule extends ReactContextBaseJavaModule {
     Uri contentUri = null;
     Boolean showOpenWithDialog = options.hasKey(SHOW_OPEN_WITH_DIALOG) ? options.getBoolean(SHOW_OPEN_WITH_DIALOG) : false;
     Boolean showStoreSuggestions = options.hasKey(SHOW_STORE_SUGGESTIONS) ? options.getBoolean(SHOW_STORE_SUGGESTIONS) : false;
+    Boolean showSendButton = options.hasKey(SHOW_SEND_BUTTON) ? options.getBoolean(SHOW_SEND_BUTTON) : false;
 
     if(path.startsWith("content://")) {
       contentUri = Uri.parse(path);

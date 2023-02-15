@@ -5,6 +5,7 @@
 
 #define OPEN_EVENT @"RNFileViewerDidOpen"
 #define DISMISS_EVENT @"RNFileViewerDidDismiss"
+#define SEND_EVENT @"RNFileViewerDidSend"
 
 @interface File: NSObject<QLPreviewItem>
 

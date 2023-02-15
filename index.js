@@ -8,7 +8,7 @@ let lastId = 0;
 function open(path, options = {}) {
   const _options =
     typeof options === "string" ? { displayName: options } : options;
-  const { onDismiss, ...nativeOptions } = _options;
+  const { onDismiss, onSend, ...nativeOptions } = _options;
 
   if (!["android", "ios"].includes(Platform.OS)) {
     return RNFileViewer.open(path, nativeOptions);
@@ -32,6 +32,15 @@ function open(path, options = {}) {
         if (id === currentId) {
           dismissSubscription.remove();
           onDismiss && onDismiss();
+        }
+      }
+    );
+    const sendSubscription = eventEmitter.addListener(
+      "RNFileViewerDidSend",
+      ({ id }) => {
+        if (id === currentId) {
+          sendSubscription.remove();
+          onSend && onSend();
         }
       }
     );
