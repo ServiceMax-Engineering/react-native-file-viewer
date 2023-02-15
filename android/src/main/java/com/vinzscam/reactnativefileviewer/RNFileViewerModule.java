@@ -24,6 +24,7 @@ public class RNFileViewerModule extends ReactContextBaseJavaModule {
   private final ReactApplicationContext reactContext;
   private static final String SHOW_OPEN_WITH_DIALOG = "showOpenWithDialog" ;
   private static final String SHOW_STORE_SUGGESTIONS ="showAppsSuggestions";
+  private static final String SHOW_SEND_BUTTON ="showSendButton";
   private static final String OPEN_EVENT = "RNFileViewerDidOpen";
   private static final String DISMISS_EVENT = "RNFileViewerDidDismiss";
   private static final Integer RN_FILE_VIEWER_REQUEST = 33341;
